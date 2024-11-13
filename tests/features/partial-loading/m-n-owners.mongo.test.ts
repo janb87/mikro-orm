@@ -56,7 +56,7 @@ beforeAll(async () => {
 
   await orm.em.flush();
 
-  orm.em.nativeUpdate(Author, { name: "No Books" }, { books: undefined });
+  await orm.em.nativeUpdate(Author, { name: "No Books" }, { books: undefined });
 });
 
 afterAll(async () => {
